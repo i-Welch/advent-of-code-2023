@@ -15,4 +15,12 @@ Standard libraries are nice.
 
 ## Day 2
 
+There seems to be a lot of different ways to do the string iteration in Go. I'm probably need to do a quick survey of all the string manipulation functions in the standard library. I appreciate the ease of which I can go from string to runes to byte arrays, but that they also have to be cast explicitly. AFAIK the conversions don't require any runtime overhead, but I'm not sure. I'll have to look into that.
+
+I need to go back and fix up how these are structured. Right now I'm just calling the functions of each day module in main.go while also directly referencing the input files in each day. Ideally I'd go back and read the files in from main.go and pass them into the day modules. I don't know what the best format for that would be yet. The three options I have right now are: - pass in the built in `os.File` type - pass in a `io.Reader` type - pass in a `string` type
+
+Will make a decision on day 5 once I have enough examples to make an informed decision.
+
+## Day 3
+
 (cont.)

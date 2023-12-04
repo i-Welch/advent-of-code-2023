@@ -109,11 +109,7 @@ func DoPartTwo() {
 
 		rounds := strings.Split(game[1], ";")
 
-		minColors := map[string]int{
-			"red":   0,
-			"blue":  0,
-			"green": 0,
-		}
+		minColors := map[string]int{}
 
 		for _, round := range rounds {
 			colorCounts := strings.Split(round, ",")

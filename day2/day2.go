@@ -101,8 +101,6 @@ func DoPartTwo() {
 
 		game := strings.Split(line, ":")
 
-		gameId, err := strconv.Atoi(strings.Split(game[0], " ")[1])
-
 		if err != nil {
 			panic(err)
 		}
@@ -125,8 +123,6 @@ func DoPartTwo() {
 				}
 			}
 		}
-
-		fmt.Printf("gameId: %d - power: %d\n", gameId, minColors["red"]*minColors["blue"]*minColors["green"])
 
 		total += minColors["red"] * minColors["blue"] * minColors["green"]
 

@@ -17,10 +17,14 @@ Standard libraries are nice.
 
 There seems to be a lot of different ways to do the string iteration in Go. I'm probably need to do a quick survey of all the string manipulation functions in the standard library. I appreciate the ease of which I can go from string to runes to byte arrays, but that they also have to be cast explicitly. AFAIK the conversions don't require any runtime overhead, but I'm not sure. I'll have to look into that.
 
-I need to go back and fix up how these are structured. Right now I'm just calling the functions of each day module in main.go while also directly referencing the input files in each day. Ideally I'd go back and read the files in from main.go and pass them into the day modules. I don't know what the best format for that would be yet. The three options I have right now are: - pass in the built in `os.File` type - pass in a `io.Reader` type - pass in a `string` type
+I need to go back and fix up how these are structured. Right now I'm just calling the functions of each day module in main.go while also directly referencing the input files in each day. Ideally I'd go back and read the files in from main.go and pass them into the day modules. I don't know what the best format for that would be yet. The three options I have right now are: - pass in the built in `os.File` type - pass in a `bufio.Reader` type - pass in a `string` type
 
 Will make a decision on day 5 once I have enough examples to make an informed decision.
 
 ## Day 3
+
+Decided better late than never to start working with different string manipulation functions in the std lib so I tried out scanner. Seemingly less powerful than the `bufio.Reader` but if it does what you need it to specifically then it gives better dx. I'll probably use it when possible but it's nice to know that I can fall back on the `bufio.Reader` if I need to.
+
+Regex is a very powerful tool. In fact it's so powerful I feel as if a lot of the problem solving for a certain class of problems can be done just by reaching for regex. Which when trying to get more comfortable with a tool is actually a pretty bad thing. Like why would I even need to learn the ins and outs of doing something in a language when instead I can just learn how to call into the regex library for that language and then everything else is pretty much handled? I think probably either on day 4 or 5 I'm going to stop using regex all together in order to try and get more comfortable with different aspects of GoLang. I may also start playing with some of the IO functionality to turn a lot of the day solutions into a CLI tool which I think will help expose me to things I haven't had to worry about as much (as most of the GoLang stuff I've done so far has been web apis, JSON parsing, and database stuff).
 
 (cont.)
